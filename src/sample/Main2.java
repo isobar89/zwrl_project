@@ -11,7 +11,7 @@ public class Main2 {
         String fileName = "test.txt";
         DataOutputStream outputStream = null;
         TreeSet<String> tablica = new TreeSet<>();
-        int zmi = 0;
+
         int z = 0;
 
         String[] cmdarray = {"netstat", "-n"};
@@ -46,7 +46,7 @@ public class Main2 {
                 if (z > 4) {
                     String zobaczymy = nextLine.substring(5, 30).trim();
                     tablica.add(zobaczymy.substring(0, zobaczymy.length() - 6));
-                    zmi++; }
+                    }
                 z++; }
 
         } catch (IOException e) {
@@ -61,6 +61,10 @@ public class Main2 {
                 e.printStackTrace();
             }
         }
+        PrintWriter writer = new PrintWriter(fileName);
+        writer.print("");
+        writer.close();
+
         File f = new File("test2.txt");
         f.createNewFile();
         FileWriter fw = new FileWriter(f);

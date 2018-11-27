@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.FunctionIPController;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -29,7 +30,6 @@ public class Main extends Application {
     public static void main(String[] args) throws IOException {
        Main2 main2 = new Main2();
        Main2.main("test");
-
         launch(args);
     }
 
